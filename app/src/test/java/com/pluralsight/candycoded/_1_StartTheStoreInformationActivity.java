@@ -71,7 +71,9 @@ public class _1_StartTheStoreInformationActivity {
                 PowerMockito.verifyNew(Intent.class, Mockito.atLeastOnce()).withArguments(Mockito.any(
                     MainActivity.class), Mockito.any(Class.class));
                 called_Intent = true;
-            } catch (Throwable e) {
+            }
+
+            catch (Throwable e) {
                 //e.printStackTrace();
             }
 
