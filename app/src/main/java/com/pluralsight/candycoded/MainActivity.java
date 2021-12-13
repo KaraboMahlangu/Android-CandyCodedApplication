@@ -1,6 +1,9 @@
 package com.pluralsight.candycoded;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
@@ -9,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -27,6 +31,10 @@ import cz.msebera.android.httpclient.Header;
 public class MainActivity extends AppCompatActivity {
   private Candy[] candies;
   private CandyDbHelper candyDbHelper = new CandyDbHelper(this);
+
+  public void Menu(int resId) {
+    Activity a =(MenuItem item);
+  }
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +90,14 @@ public class MainActivity extends AppCompatActivity {
   // ***
   // TODO - Task 1 - Show Store Information Activity
   // ***
+
+  @Override
+  public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    String packageContext;
+    Intent infoIntent = new Intent( packageContext: this, InfoActivity.class);
+      startActivity(infoIntent);
+    return super.onOptionsItemSelected(item);
+  }
 
   private void addCandiesToDatabase(Candy[] candies) {
     SQLiteDatabase db = candyDbHelper.getWritableDatabase();

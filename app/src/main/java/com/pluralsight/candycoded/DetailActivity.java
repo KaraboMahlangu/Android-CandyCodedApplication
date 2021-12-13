@@ -14,7 +14,7 @@ import com.pluralsight.candycoded.DB.CandyContract.CandyEntry;
 import com.pluralsight.candycoded.DB.CandyDbHelper;
 import com.squareup.picasso.Picasso;
 
-public class DetailActivity extends AppCompatActivity {
+public class DetailActivity<name, label> extends AppCompatActivity {
 
     public static final String SHARE_DESCRIPTION = "Look at this delicious candy from Candy Coded - ";
     public static final String HASHTAG_CANDYCODED = " #candycoded";
@@ -68,6 +68,22 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     // ***
-    // TODO - Task 4 - Share the Current Candy with an Intent
+    // <manifest xmlns : android= "http://candy.android.com/apk/res/android.">
+            <application>
+
+                <activity
+                    android: name= ".FileSelectActivity"
+                    android : label= "@File Selector"
+                    <intent>
+                        <action
+                             android:name="android.intent.action.PICK"/>
+                    <category
+    android:name="android.intent.category.DEFAULT"/>
+                    <category
+    android:name="android.intent.category.OPENABLE"/>
+                    <data android:mimeType="text/plain"/>
+                    <data android:mimeType="image/*"/>
+                </intent>
+            </activity>
     // ***
 }
