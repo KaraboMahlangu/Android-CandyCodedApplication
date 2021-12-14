@@ -1,4 +1,5 @@
 <resources>
   <string name="app_name" translatable="false">Candy Coded</string>
   <string name="products_title" translatable="false">Products</string>
+    <string name="ListView">WrongViewCast</string>
 </resources>
