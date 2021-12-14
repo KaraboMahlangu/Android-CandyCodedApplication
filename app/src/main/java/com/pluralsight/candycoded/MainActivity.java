@@ -31,9 +31,10 @@ import cz.msebera.android.httpclient.Header;
 public class MainActivity extends AppCompatActivity {
   private Candy[] candies;
   private CandyDbHelper candyDbHelper = new CandyDbHelper(this);
+  private Object MenuItem;
 
-  public void Menu(int resId) {
-    Activity a =(MenuItem item);
+  public void onCreate (int resId) {
+
   }
 
   @Override
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
   @Override
   public boolean onOptionsItemSelected(@NonNull MenuItem item) {
     String packageContext;
-    Intent infoIntent = new Intent( packageContext: this, InfoActivity.class);
+    Intent infoIntent = new Intent( this, InfoActivity.class);
       startActivity(infoIntent);
     return super.onOptionsItemSelected(item);
   }
